@@ -9,6 +9,16 @@ DoublyCL <T>::DoublyCL()
     iCount = 0;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Display()
+//  Input :             None
+//  Output :            Void
+//  Description :       Displays elements of singly linked list
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template <class T>
 void DoublyCL<T>::Display()
 {
@@ -32,11 +42,31 @@ void DoublyCL<T>::Display()
     cout<<"\n";
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Count()
+//  Input :             None
+//  Output :            int
+//  Description :       return total number of elements in linked list
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template <class T>
 int DoublyCL<T>::Count()
 {
     return iCount;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     InsertFirst()
+//  Input :             Template parameter
+//  Output :            Void
+//  Description :       Inserts element at first position in linked list
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template <class T>
 void DoublyCL<T>::InsertFirst(T no)
@@ -62,6 +92,16 @@ void DoublyCL<T>::InsertFirst(T no)
     iCount++;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     InsertLast()
+//  Input :             Template parameter
+//  Output :            Void
+//  Description :       Inserts element at last position in linked list
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template <class T>
 void DoublyCL<T>::InsertLast(T no)
 {
@@ -85,6 +125,16 @@ void DoublyCL<T>::InsertLast(T no)
     last->next = first;
     iCount++;
 }
+
+//////////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     InsertAtPos()
+//  Input :             Template parameter, int
+//  Output :            Void
+//  Description :       Inserts element at a specified position in linked list
+//
+//////////////////////////////////////////////////////////////////////////////
+
 
 template <class T>
 void DoublyCL<T>::InsertAtPos(T no, int iPos)
@@ -129,6 +179,16 @@ void DoublyCL<T>::InsertAtPos(T no, int iPos)
     }
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     DeleteFirst()
+//  Input :             None
+//  Output :            Void
+//  Description :       Deletes element at first position in linked list
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template <class T>
 void DoublyCL<T>::DeleteFirst()
 {
@@ -152,6 +212,16 @@ void DoublyCL<T>::DeleteFirst()
     iCount--;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     DeleteLast()
+//  Input :             None
+//  Output :            Void
+//  Description :       Deletes element at last position in linked list
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template <class T>
 void DoublyCL<T>::DeleteLast()
 {
@@ -174,6 +244,16 @@ void DoublyCL<T>::DeleteLast()
     }
     iCount--;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     DeleteAtPos()
+//  Input :             int
+//  Output :            Void
+//  Description :       Deletes element at a specified position in linked list
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template <class T>
 void DoublyCL<T>::DeleteAtPos(int iPos)
@@ -210,6 +290,16 @@ void DoublyCL<T>::DeleteAtPos(int iPos)
     }
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Frequency()
+//  Input :             Template Parameter
+//  Output :            int
+//  Description :       Claculates frequency of a given element
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template<class T>
 int DoublyCL<T>:: Frequency(T no)
 {
@@ -232,6 +322,15 @@ int DoublyCL<T>:: Frequency(T no)
 
     return iCnt;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     FirstOccurance()
+//  Input :             Template parameter
+//  Output :            int
+//  Description :       Returns First position of a given element
+//
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 int DoublyCL<T>:: FirstOccurance(T no)
@@ -258,6 +357,16 @@ int DoublyCL<T>:: FirstOccurance(T no)
 
     return iPos;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     LastOccurance()
+//  Input :             Template parameter
+//  Output :            int
+//  Description :       Returns Last position of a given element
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
 int DoublyCL<T>:: LastOccurance(T no)
@@ -294,6 +403,16 @@ int DoublyCL<T>:: LastOccurance(T no)
     return iPos;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Minimum()
+//  Input :             None
+//  Output :            Template parameter
+//  Description :       returns the smallest element
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template<class T>
 T DoublyCL<T>::Minimum()
 {
@@ -318,6 +437,16 @@ T DoublyCL<T>::Minimum()
 
     return Min;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Maximum()
+//  Input :             None
+//  Output :            Template parameter
+//  Description :       Returns the largest element
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
 T DoublyCL<T>::Maximum()
@@ -344,6 +473,16 @@ T DoublyCL<T>::Maximum()
     return Max;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Summation()
+//  Input :             None
+//  Output :            Template parameter
+//  Description :       Returns Summation of all the elements of list
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template<class T>
 T DoublyCL<T>::Summation()
 {   
@@ -366,6 +505,16 @@ T DoublyCL<T>::Summation()
     return Sum;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     LinearSearch()
+//  Input :             Template parameter
+//  Output :            bool
+//  Description :       Uses Linear search to seach a given element
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template<class T>
 bool DoublyCL<T>::LinearSearch(T no)
 {
@@ -385,6 +534,15 @@ bool DoublyCL<T>::LinearSearch(T no)
         
     return flag;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Bidirectional()
+//  Input :             Template parameter
+//  Output :            bool
+//  Description :       Uses Bidirectional search to seach a given element
+//
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 bool DoublyCL<T>::Bidirectional(T no)
@@ -414,6 +572,17 @@ bool DoublyCL<T>::Bidirectional(T no)
 
     return flag;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     CheckSorted()
+//  Input :             int 
+//  Output :            Void
+//  Description :       Checks if the list is increasingly or decreasing 
+//                      sorted
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
 bool DoublyCL<T>::CheckSorted(int iOrder)
@@ -453,6 +622,17 @@ bool DoublyCL<T>::CheckSorted(int iOrder)
     }
     
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     BubbleSort()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses BubbleSort to sort the list in increasing or
+//                      decreasing order
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
 void DoublyCL<T>:: BubbleSort(int iOrder)
@@ -502,6 +682,18 @@ void DoublyCL<T>:: BubbleSort(int iOrder)
     }
 
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     BubbleSortEfficient()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses BubbleSort to sort the list in increasing or
+//                      decreasing order and breaks loop if no swapping
+//                      takes place
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
 void DoublyCL<T>:: BubbleSortEfficient(int iOrder)
@@ -562,6 +754,16 @@ void DoublyCL<T>:: BubbleSortEfficient(int iOrder)
         }
     }
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     SelectionSort()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses SelectionSort to sort the list in increasing or
+//                      decreasing order
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
 void DoublyCL<T> :: SelectionSort(int iOrder)

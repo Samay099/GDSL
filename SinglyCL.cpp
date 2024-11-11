@@ -355,7 +355,6 @@ int SinglyCL<T>:: FirstOccurance(T no)
 //
 //////////////////////////////////////////////////////////////////////////
 
-
 template<class T>
 int SinglyCL<T>:: LastOccurance(T no)
 {
@@ -471,7 +470,6 @@ T SinglyCL<T>::Maximum()
 //  Description :       Returns Summation of all the elements of list
 //
 //////////////////////////////////////////////////////////////////////////
-
 
 template<class T>
 T SinglyCL<T>::Summation()
