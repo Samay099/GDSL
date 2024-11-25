@@ -1,6 +1,23 @@
 #include"Stack.h"
 
 template<class T>
+Stack<T>::Stack()
+{
+    first = NULL;
+    iCount = 0;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Display()
+//  Input :             None
+//  Output :            Void
+//  Description :       Displays elements of singly linked list
+//
+//////////////////////////////////////////////////////////////////////////
+
+
+template<class T>
 void Stack<T>::Display()
 {
     if(first == NULL)
@@ -20,18 +37,31 @@ void Stack<T>::Display()
     }
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Count()
+//  Input :             None
+//  Output :            int
+//  Description :       return total number of elements in linked list
+//
+//////////////////////////////////////////////////////////////////////////
+
 template<class T>
 int Stack<T>::Count()
 {
     return iCount;
 }
 
-template<class T>
-Stack<T>::Stack()
-{
-    first = NULL;
-    iCount = 0;
-}
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Push()
+//  Input :             Template parameter
+//  Output :            Void
+//  Description :       Pushes the element in the stack
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
 void Stack<T>::Push(T no)               //InsertFirst()
@@ -51,6 +81,15 @@ void Stack<T>::Push(T no)               //InsertFirst()
     }
     iCount++;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Pop()
+//  Input :             Template parameter
+//  Output :            Void
+//  Description :       Pops the element from the stack
+//
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 T Stack<T>::Pop()                       //DeleteFirst()
@@ -81,6 +120,16 @@ T Stack<T>::Pop()                       //DeleteFirst()
     return Value;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Frequency()
+//  Input :             Template Parameter
+//  Output :            int
+//  Description :       Calculates frequency of a given element
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template<class T>
 int Stack<T>:: Frequency(T no)
 {
@@ -103,6 +152,15 @@ int Stack<T>:: Frequency(T no)
 
     return iCnt;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     FirstOccurance()
+//  Input :             Template parameter
+//  Output :            int
+//  Description :       Returns First position of a given element
+//
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 int Stack<T>:: FirstOccurance(T no)
@@ -130,6 +188,15 @@ int Stack<T>:: FirstOccurance(T no)
     return iPos;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     LastOccurance()
+//  Input :             Template parameter
+//  Output :            int
+//  Description :       Returns Last position of a given element
+//
+//////////////////////////////////////////////////////////////////////////
+
 template<class T>
 int Stack<T>:: LastOccurance(T no)
 {
@@ -154,6 +221,15 @@ int Stack<T>:: LastOccurance(T no)
 
     return iPos;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Minimum()
+//  Input :             None
+//  Output :            Template parameter
+//  Description :       returns the smallest element
+//
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 T Stack<T>::Minimum()
@@ -180,6 +256,16 @@ T Stack<T>::Minimum()
     return Min;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Maximum()
+//  Input :             None
+//  Output :            Template parameter
+//  Description :       Returns the largest element
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template<class T>
 T Stack<T>::Maximum()
 {
@@ -205,6 +291,15 @@ T Stack<T>::Maximum()
     return Max;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Summation()
+//  Input :             None
+//  Output :            Template parameter
+//  Description :       Returns Summation of all the elements of list
+//
+//////////////////////////////////////////////////////////////////////////
+
 template<class T>
 T Stack<T>::Summation()
 {   
@@ -227,6 +322,15 @@ T Stack<T>::Summation()
     return Sum;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     LinearSearch()
+//  Input :             Template parameter
+//  Output :            bool
+//  Description :       Uses Linear search to seach a given element
+//
+//////////////////////////////////////////////////////////////////////////
+
 template<class T>
 bool Stack<T>::LinearSearch(T no)
 {
@@ -245,6 +349,16 @@ bool Stack<T>::LinearSearch(T no)
     }
     return flag;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     CheckSorted()
+//  Input :             int 
+//  Output :            Void
+//  Description :       Checks if the list is increasingly or decreasing 
+//                      sorted
+//
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 bool Stack<T>::CheckSorted(int iOrder)
@@ -280,6 +394,17 @@ bool Stack<T>::CheckSorted(int iOrder)
     return flag;
     }
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     BubbleSort()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses BubbleSort to sort the stack in increasing or
+//                      decreasing order
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
 void Stack<T>:: BubbleSort(int iOrder)
@@ -329,6 +454,17 @@ void Stack<T>:: BubbleSort(int iOrder)
     }
 
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     BubbleSortEfficient()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses BubbleSort to sort the list in increasing or
+//                      decreasing order and breaks loop if no swapping
+//                      takes place
+//
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 void Stack<T>:: BubbleSortEfficient(int iOrder)
@@ -389,6 +525,15 @@ void Stack<T>:: BubbleSortEfficient(int iOrder)
         }
     }
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     SelectionSort()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses SelectionSort to sort the list in increasing or
+//                      decreasing order
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 void Stack<T> :: SelectionSort(int iOrder)

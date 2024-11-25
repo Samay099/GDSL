@@ -14,6 +14,16 @@ ArrayX<T> :: ~ArrayX()
     delete []Arr;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Accept()
+//  Input :             None
+//  Output :            void
+//  Description :       accepts input from the user 
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template <class T>
 void ArrayX<T> :: Accept()
 {
@@ -23,6 +33,15 @@ void ArrayX<T> :: Accept()
         cin>>Arr[iCnt];
     }
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Display()
+//  Input :             None
+//  Output :            void
+//  Description :       Displays elements of array
+//
+//////////////////////////////////////////////////////////////////////////
 
 template <class T>
 void ArrayX<T> :: Display()
@@ -34,6 +53,15 @@ void ArrayX<T> :: Display()
     }
     cout<<"\n";
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     CheckSorted()
+//  Input :             None
+//  Output :            bool
+//  Description :       Checks if the array is sorted or not
+//
+//////////////////////////////////////////////////////////////////////////
 
 template <class T>
 bool ArrayX<T> :: CheckSorted()
@@ -56,6 +84,15 @@ bool ArrayX<T> :: CheckSorted()
     return flag;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     BubbleSort()
+//  Input :             None
+//  Output :            void
+//  Description :       Sorts the arry using bubblesort
+//
+//////////////////////////////////////////////////////////////////////////
+
 template <class T>
 void ArrayX<T> :: BubbleSort()
 {
@@ -75,6 +112,16 @@ void ArrayX<T> :: BubbleSort()
         }
     }
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     BubbleSortEfficient()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses BubbleSort to sort the array and breaks 
+//                      loop if no swapping takes place
+//
+//////////////////////////////////////////////////////////////////////////
 
 template <class T>
 void ArrayX<T> :: BubbleSortEfficient()
@@ -104,6 +151,15 @@ void ArrayX<T> :: BubbleSortEfficient()
     }
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     InsertionSort()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses InsertionSort to sort the array
+//
+//////////////////////////////////////////////////////////////////////////
+
 template <class T>
 void ArrayX <T>::InsertionSort()
 {
@@ -119,6 +175,16 @@ void ArrayX <T>::InsertionSort()
         Arr[j + 1] = selected;
     }
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     BubbleSortEfficient()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses BubbleSort to sort the array order and breaks 
+//                      loop if no swapping takes place
+//
+//////////////////////////////////////////////////////////////////////////
 
 template <class T>
 void ArrayX <T>::SelectionSort()

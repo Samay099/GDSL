@@ -7,7 +7,6 @@ DoublyLL <T>::DoublyLL()
     iCount = 0;
 }
 
-
 //////////////////////////////////////////////////////////////////////////
 //
 //  Function name :     Display()
@@ -359,7 +358,6 @@ int DoublyLL<T>:: FirstOccurance(T no)
 //
 //////////////////////////////////////////////////////////////////////////
 
-
 template<class T>
 int DoublyLL<T>:: LastOccurance(T no)
 {
@@ -394,7 +392,6 @@ int DoublyLL<T>:: LastOccurance(T no)
 //
 //////////////////////////////////////////////////////////////////////////
 
-
 template<class T>
 T DoublyLL<T>::Minimum()
 {
@@ -419,7 +416,6 @@ T DoublyLL<T>::Minimum()
 
     return Min;
 }
-
 
 //////////////////////////////////////////////////////////////////////////
 //
@@ -463,7 +459,6 @@ T DoublyLL<T>::Maximum()
 //  Description :       Returns Summation of all the elements of list
 //
 //////////////////////////////////////////////////////////////////////////
-
 
 template<class T>
 T DoublyLL<T>::Summation()
@@ -617,7 +612,6 @@ bool DoublyLL<T>::CheckSorted(int iOrder )
 //
 //////////////////////////////////////////////////////////////////////////
 
-
 template<class T>
 void DoublyLL<T>:: BubbleSort(int iOrder)
 {
@@ -747,7 +741,6 @@ void DoublyLL<T>:: BubbleSortEfficient(int iOrder)
 //  Description :       Uses SelectionSort to sort the list in increasing or
 //                      decreasing order
 //////////////////////////////////////////////////////////////////////////
-
 
 template<class T>
 void DoublyLL<T> :: SelectionSort(int iOrder)

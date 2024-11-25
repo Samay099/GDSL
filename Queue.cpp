@@ -1,5 +1,22 @@
 #include"Queue.h"
 
+template<class T>
+Queue<T>::Queue()
+{
+    first = NULL;
+    iCount = 0;
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Display()
+//  Input :             None
+//  Output :            Void
+//  Description :       Displays elements of singly linked list
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
 void Queue<T>::Display()
@@ -21,21 +38,34 @@ void Queue<T>::Display()
     }
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Count()
+//  Input :             None
+//  Output :            int
+//  Description :       return total number of elements in linked list
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template<class T>
 int Queue<T>::Count()
 {
     return iCount;
 }
 
-template<class T>
-Queue<T>::Queue()
-{
-    first = NULL;
-    iCount = 0;
-}
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Push()
+//  Input :             Template parameter
+//  Output :            Void
+//  Description :       Enqueues the element in the Queue
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
-void Queue<T>::Enqueue(T no)
+void Queue<T>::Enqueue(T no)    //insert first
 {
     NodeS<T> * newn = new NodeS<T>;
     newn->data = no;
@@ -53,8 +83,17 @@ void Queue<T>::Enqueue(T no)
     iCount++;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Dequeue()
+//  Input :             Template parameter
+//  Output :            Void
+//  Description :       Dequeue the element from the Queue
+//
+//////////////////////////////////////////////////////////////////////////
+
 template<class T>
-T Queue<T>::Dequeue()
+T Queue<T>::Dequeue()       //delete last
 {
     T Value = 0;
 
@@ -86,6 +125,16 @@ T Queue<T>::Dequeue()
     return Value;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Frequency()
+//  Input :             Template Parameter
+//  Output :            int
+//  Description :       Calculates frequency of a given element
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template<class T>
 int Queue<T>:: Frequency(T no)
 {
@@ -108,6 +157,15 @@ int Queue<T>:: Frequency(T no)
 
     return iCnt;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     FirstOccurance()
+//  Input :             Template parameter
+//  Output :            int
+//  Description :       Returns First position of a given element
+//
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 int Queue<T>:: FirstOccurance(T no)
@@ -135,6 +193,15 @@ int Queue<T>:: FirstOccurance(T no)
     return iPos;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     LastOccurance()
+//  Input :             Template parameter
+//  Output :            int
+//  Description :       Returns Last position of a given element
+//
+//////////////////////////////////////////////////////////////////////////
+
 template<class T>
 int Queue<T>:: LastOccurance(T no)
 {
@@ -159,6 +226,16 @@ int Queue<T>:: LastOccurance(T no)
 
     return iPos;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Minimum()
+//  Input :             None
+//  Output :            Template parameter
+//  Description :       returns the smallest element
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
 T Queue<T>::Minimum()
@@ -185,6 +262,16 @@ T Queue<T>::Minimum()
     return Min;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Maximum()
+//  Input :             None
+//  Output :            Template parameter
+//  Description :       Returns the largest element
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template<class T>
 T Queue<T>::Maximum()
 {
@@ -210,6 +297,16 @@ T Queue<T>::Maximum()
     return Max;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     Summation()
+//  Input :             None
+//  Output :            Template parameter
+//  Description :       Returns Summation of all the elements of list
+//
+//////////////////////////////////////////////////////////////////////////
+
+
 template<class T>
 T Queue<T>::Summation()
 {   
@@ -232,6 +329,15 @@ T Queue<T>::Summation()
     return Sum;
 }
 
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     LinearSearch()
+//  Input :             Template parameter
+//  Output :            bool
+//  Description :       Uses Linear search to seach a given element
+//
+//////////////////////////////////////////////////////////////////////////
+
 template<class T>
 bool Queue<T>::LinearSearch(T no)
 {
@@ -250,6 +356,17 @@ bool Queue<T>::LinearSearch(T no)
     }
     return flag;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     CheckSorted()
+//  Input :             int 
+//  Output :            Void
+//  Description :       Checks if the list is increasingly or decreasing 
+//                      sorted
+//
+//////////////////////////////////////////////////////////////////////////
+
 
 template<class T>
 bool Queue<T>::CheckSorted(int iOrder)
@@ -285,6 +402,16 @@ bool Queue<T>::CheckSorted(int iOrder)
     return flag;
     }
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     BubbleSort()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses BubbleSort to sort the stack in increasing or
+//                      decreasing order
+//
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 void Queue<T>:: BubbleSort(int iOrder)
@@ -334,6 +461,17 @@ void Queue<T>:: BubbleSort(int iOrder)
     }
 
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     BubbleSortEfficient()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses BubbleSort to sort the list in increasing or
+//                      decreasing order and breaks loop if no swapping
+//                      takes place
+//
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 void Queue<T>:: BubbleSortEfficient(int iOrder)
@@ -394,6 +532,15 @@ void Queue<T>:: BubbleSortEfficient(int iOrder)
         }
     }
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Function name :     SelectionSort()
+//  Input :             int
+//  Output :            Void
+//  Description :       Uses SelectionSort to sort the list in increasing or
+//                      decreasing order
+//////////////////////////////////////////////////////////////////////////
 
 template<class T>
 void Queue<T> :: SelectionSort(int iOrder)
